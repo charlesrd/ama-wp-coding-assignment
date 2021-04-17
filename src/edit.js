@@ -11,7 +11,14 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+
+/**
+ * Import the API Fetch for wordpress
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-api-fetch/
+ */
+import { apiFetch } from '@wordpress/api-fetch';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -22,6 +29,11 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 /**
+ * Internal dependencies
+ */
+import Temperature from './temperature'
+
+/**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
@@ -29,10 +41,25 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
-	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Ama Weather – hello from the editor!', 'ama-weather' ) }
-		</p>
-	);
+export default function Edit(props) {
+	const {
+        attributes: { content },
+        setAttributes,
+    } = props;
+    const blockProps = useBlockProps();
+    const onChangeContent = ( newContent ) => {
+        setAttributes( { content: newContent } );
+    };
+
+    return (
+    	<div className="ama-weather-block">
+	        <RichText
+	            { ...blockProps }
+	            tagName="p"
+	            onChange={ onChangeContent }
+	            value={ content }
+	        />
+	        <Temperature />
+		</div>
+    );
 }

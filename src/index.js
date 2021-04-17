@@ -6,6 +6,14 @@
 import { registerBlockType } from '@wordpress/blocks'
 
 /**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+ */
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+
+/**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * All files containing `style` keyword are bundled together. The code used
  * gets applied both to the front of your site and to the editor.
@@ -28,6 +36,16 @@ registerBlockType('ama/weather', {
 	/**
 	 * @see ./edit.js
 	 */
-	edit: Edit,
-	save: () => null,
+	attributes: {
+        content: {
+        	type: 'string',
+        },
+    },
+	example: {
+        attributes: {
+            content: 'Current Temperature',
+        },
+    },
+    edit: Edit,
+    save: () => null,
 })

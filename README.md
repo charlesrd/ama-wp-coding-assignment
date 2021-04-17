@@ -1,3 +1,7 @@
+# Live Example
+
+URL: https://ama.secondchancemtg.com/weather-post/
+
 # American Marketing Association Coding Assignment
 
 Thank you so much for your interest in the software developer position at AMA. We're thrilled that you are taking the

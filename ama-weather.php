@@ -52,7 +52,7 @@ function render_weather_block( array $attributes ): string {
         <!-- Current temperature here -->
         <?php if ($temperature == ''): ?>
 
-        	<p>Please enter a Zip Code and API Key in the plugin settings.</p>
+        	<p class="ama-weather-block-not-found">Please enter a Zip Code and API Key in the plugin settings.</p>
 
         <?php else: ?>
 	        

@@ -1,1 +1,18 @@
-.wp-block-create-block-ama-weather{border:1px dotted red}.wp-block-ama-weather{margin:0px !important}.ama-weather-block-temperature-units{vertical-align:super !important}
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-ama-weather {
+  border: 1px dotted #f00;
+}
+
+.wp-block-ama-weather {
+  margin: 0px !important;
+}
+
+.ama-weather-block-temperature-units {
+  vertical-align: super !important;
+}
+
+/*# sourceMappingURL=index.css.map*/

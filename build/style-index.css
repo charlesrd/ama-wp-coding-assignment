@@ -1,1 +1,41 @@
-.wp-block-create-block-ama-weather{background-color:#21759b;color:#fff;padding:2px}.ama-weather-block{text-align:center !important;font-family:sans-serif !important;font-size:14px;width:200px}.ama-weather-block-title{margin:0px !important}.ama-weather-block-temperature{color:#333 !important;font-size:44px !important;font-weight:700 !important;margin:0px !important}.ama-weather-block-temperature-units{color:#333 !important;font-size:20px !important;vertical-align:middle !important}
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-ama-weather {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+.ama-weather-block {
+  text-align: center !important;
+  font-family: sans-serif !important;
+  font-size: 14px;
+  width: 200px;
+}
+
+.ama-weather-block-not-found {
+  margin: 0px !important;
+}
+
+.ama-weather-block-title {
+  margin: 0px !important;
+}
+
+.ama-weather-block-temperature {
+  color: #333 !important;
+  font-size: 44px !important;
+  font-weight: 700 !important;
+  margin: 0px !important;
+}
+
+.ama-weather-block-temperature-units {
+  color: #333 !important;
+  font-size: 20px !important;
+  vertical-align: middle !important;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

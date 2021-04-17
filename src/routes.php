@@ -56,6 +56,9 @@ function getRestCurrentTemperature( WP_REST_Request $request )
 
 	// get the temperature
 	$temperature = getCurrentTemperature($units);
+	
+	// check if the response was empty
+	$temperature = ($temperature == '') ? '<p class="ama-weather-block-not-found">Please enter a Zip Code and API Key in the plugin settings.</p>' : $temperature;
 
 	// return the response to the browser
 	return rest_ensure_response($temperature);
